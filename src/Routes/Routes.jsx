@@ -11,6 +11,7 @@ import Home from "../pages/Home/Home.jsx";
         errorElement:<ErrorPage></ErrorPage>,
         children:[
             {index:true,
+                loader:()=>fetch('BooksData.json'),
                 path:"/",
                 element:<Home/>
 
