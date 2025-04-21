@@ -18,9 +18,11 @@ const Books = ({data}) => {
         <div>
             <Suspense fallback={<div>Loading...</div>}>
 
-                {
-                    data.map((singleBook )=><Book key={singleBook.bookId} singleBook={singleBook}></Book>)
-                }
+              <div className='grid grid-cols-3 gap-4'>
+                  {
+                      data.map((singleBook )=><Book key={singleBook.bookId} singleBook={singleBook}></Book>)
+                  }
+              </div>
 
             </Suspense>
         </div>
